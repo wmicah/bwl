@@ -60,7 +60,7 @@ export function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-cloud-white bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
+            className="w-full px-4 py-3 rounded-xl border border-[#E4ECF0] bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal transition"
             placeholder="Your name"
           />
         </div>
@@ -78,7 +78,7 @@ export function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-cloud-white bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
+            className="w-full px-4 py-3 rounded-xl border border-[#E4ECF0] bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal transition"
             placeholder="your.email@example.com"
           />
         </div>
@@ -98,7 +98,7 @@ export function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-cloud-white bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
+            className="w-full px-4 py-3 rounded-xl border border-[#E4ECF0] bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal transition"
             placeholder="(503) 555-0123"
           />
         </div>
@@ -115,7 +115,7 @@ export function ContactForm() {
             required
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-cloud-white bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
+            className="w-full px-4 py-3 rounded-xl border border-[#E4ECF0] bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal transition"
           >
             <option value="">Select a subject</option>
             <option value="general">General Inquiry</option>
@@ -141,7 +141,7 @@ export function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-cloud-white bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent resize-none"
+            className="w-full px-4 py-3 rounded-xl border border-[#E4ECF0] bg-white text-slate-gray focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal transition resize-none"
           placeholder="Tell us how we can help..."
         />
       </div>

@@ -13,7 +13,7 @@ export function Navbar() {
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
 	return (
-		<header className="sticky top-0 z-40 w-full bg-[#0E1E2A]/80 backdrop-blur-md border-b border-black/20 transition-shadow">
+		<header className="sticky top-0 z-40 w-full bg-[#0E1E2A]/95 backdrop-blur border-b border-black/20 transition-shadow">
 			<nav className="max-w-6xl mx-auto px-4 md:px-6 py-3">
 				<div className="flex items-center justify-between">
 					{/* Logo */}
@@ -32,10 +32,14 @@ export function Navbar() {
 					<div className="hidden md:flex items-center gap-6">
 						<ul className="flex items-center gap-6">
 							{NAV_LINKS.map((link) => (
-								<li key={link.href}>
+								<li key={link.label}>
 									<a
-										href="#"
-										onClick={(e) => e.preventDefault()}
+										href={link.href}
+										onClick={(e) => {
+											if (link.href === "/") {
+												e.preventDefault()
+											}
+										}}
 										className="text-white/90 text-sm font-medium hover:text-[#09C4F2] transition-colors cursor-pointer"
 									>
 										{link.label}
@@ -44,7 +48,7 @@ export function Navbar() {
 							))}
 						</ul>
 						<Link
-							href="/location"
+							href="/"
 							className="inline-flex items-center rounded-full bg-[#09C4F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#09C4F2]/30 hover:bg-[#06AED9] hover:shadow-lg hover:shadow-[#09C4F2]/30 transition-all"
 						>
 							<MapPin className="mr-2 h-4 w-4" />
@@ -75,11 +79,13 @@ export function Navbar() {
 				>
 					<ul className="py-4 space-y-3 border-t border-white/10">
 						{NAV_LINKS.map((link) => (
-							<li key={link.href}>
+							<li key={link.label}>
 								<a
-									href="#"
+									href={link.href}
 									onClick={(e) => {
-										e.preventDefault()
+										if (link.href === "/") {
+											e.preventDefault()
+										}
 										setIsMenuOpen(false)
 									}}
 									className="block text-white/90 text-sm font-medium hover:text-[#09C4F2] py-2 transition-colors cursor-pointer"
@@ -90,8 +96,11 @@ export function Navbar() {
 						))}
 						<li>
 							<Link
-								href="/location"
-								onClick={() => setIsMenuOpen(false)}
+								href="/"
+								onClick={(e) => {
+									e.preventDefault()
+									setIsMenuOpen(false)
+								}}
 								className="inline-flex items-center rounded-full bg-[#09C4F2] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-[#09C4F2]/30 hover:bg-[#06AED9] hover:shadow-lg hover:shadow-[#09C4F2]/30 transition-all mt-4"
 							>
 								<MapPin className="mr-2 h-4 w-4" />

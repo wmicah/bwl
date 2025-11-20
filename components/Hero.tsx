@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal"
 
 export function Hero() {
 	return (
-		<section className="relative w-full min-h-[500px] md:min-h-[600px] bg-gradient-to-br from-sky-tint via-soft-white to-mint-glow flow-wave" style={{ overflowX: "hidden", overflowY: "visible" }}>
+		<section className="relative w-full min-h-[500px] md:min-h-[600px] bg-gradient-to-b from-white to-[#EAF7FB] flow-wave" style={{ overflowX: "hidden", overflowY: "visible" }}>
       {/* Animated floating bubbles */}
       <FloatingBubbles />
       
@@ -34,12 +34,12 @@ export function Hero() {
         </svg>
       </div>
 
-			<div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
+			<div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 					{/* Left: Text Content */}
 					<div className="space-y-4 md:space-y-5">
 						<ScrollReveal direction="right" delay={0} distance={100}>
-							<h1 className="font-heading text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-royal-blue via-teal to-royal-blue bg-clip-text text-transparent text-left leading-tight">
+							<h1 className="font-heading text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-[#050DD7] via-teal to-[#050DD7] bg-clip-text text-transparent text-left leading-tight">
 								Brand New Speed Queen Laundromat.
 							</h1>
 						</ScrollReveal>
@@ -48,16 +48,24 @@ export function Hero() {
 								Huge high-capacity machines, ozone sanitation, and laundry done in
 								about 45 minutes.
 							</p>
+							{/* Location + Hours line */}
+							<p className="text-sm text-slate-gray mt-3 flex items-center gap-2">
+								<span>Hillsboro, OR</span>
+								<span>·</span>
+								<span>Open 7 days a week</span>
+								<span>·</span>
+								<span>6am–10pm</span>
+							</p>
 						</ScrollReveal>
 						<ScrollReveal direction="up" delay={400} distance={50}>
 							<div className="flex flex-col sm:flex-row items-start gap-3">
-								<Link href="/location">
+								<Link href="/">
 									<Button variant="primary" className="text-sm px-6 py-3">
 										<MapPin className="mr-2 h-4 w-4" />
 										Get Directions
 									</Button>
 								</Link>
-								<Link href="/pricing">
+								<Link href="/">
 									<Button variant="outline" className="text-sm px-6 py-3">
 										<DollarSign className="mr-2 h-4 w-4" />
 										View Pricing

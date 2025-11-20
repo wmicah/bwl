@@ -5,7 +5,7 @@ import { OzoneSection } from "@/components/OzoneSection"
 import { Footer } from "@/components/Footer"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Wrench, DollarSign, MapPin, Mail } from "lucide-react"
 
 export default function Home() {
 	return (
@@ -20,7 +20,11 @@ export default function Home() {
 			<Hours />
 
 			{/* Quick Links Section */}
-			<section className="py-10 md:py-14 bg-cloud-white relative overflow-hidden">
+			<section className="py-16 md:py-20 bg-white relative overflow-hidden">
+				<div
+					className="absolute inset-0 bg-[#F5F8FA]"
+					style={{ marginTop: "2rem" }}
+				/>
 				{/* Background flow effect */}
 				<div className="absolute inset-0 opacity-30">
 					<div
@@ -48,14 +52,14 @@ export default function Home() {
 							</p>
 						</div>
 					</ScrollReveal>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
 						<ScrollReveal direction="left" delay={50} distance={80}>
-							<Link href="/services">
-								<div className="bg-white rounded-card p-4 md:p-5 shadow-soft card-flow water-droplet">
-									<h3 className="font-heading font-semibold text-base text-charcoal mb-1.5">
+							<Link href="/">
+								<div className="bg-white rounded-2xl p-4 md:p-5 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out h-full">
+									<h3 className="font-heading font-semibold text-base text-[#050DD7] mb-1.5">
 										Our Services
 									</h3>
-									<p className="text-slate-gray text-xs mb-3">
+									<p className="text-slate-gray text-xs mb-3 leading-relaxed">
 										Brand new Speed Queen machines and state-of-the-art
 										equipment
 									</p>
@@ -66,12 +70,12 @@ export default function Home() {
 							</Link>
 						</ScrollReveal>
 						<ScrollReveal direction="up" delay={100} distance={60}>
-							<Link href="/pricing">
-								<div className="bg-white rounded-card p-4 md:p-5 shadow-soft card-flow water-droplet">
-									<h3 className="font-heading font-semibold text-base text-charcoal mb-1.5">
+							<Link href="/">
+								<div className="bg-white rounded-2xl p-4 md:p-5 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out h-full">
+									<h3 className="font-heading font-semibold text-base text-[#050DD7] mb-1.5">
 										Pricing
 									</h3>
-									<p className="text-slate-gray text-xs mb-3">
+									<p className="text-slate-gray text-xs mb-3 leading-relaxed">
 										Competitive rates for all load sizes
 									</p>
 									<div className="flex items-center text-teal font-medium text-xs">
@@ -81,12 +85,12 @@ export default function Home() {
 							</Link>
 						</ScrollReveal>
 						<ScrollReveal direction="right" delay={150} distance={80}>
-							<Link href="/location">
-								<div className="bg-white rounded-card p-4 md:p-5 shadow-soft card-flow water-droplet">
-									<h3 className="font-heading font-semibold text-base text-charcoal mb-1.5">
+							<Link href="/">
+								<div className="bg-white rounded-2xl p-4 md:p-5 border-2 border-teal/30 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out h-full relative">
+									<h3 className="font-heading font-semibold text-base text-[#050DD7] mb-1.5">
 										Location
 									</h3>
-									<p className="text-slate-gray text-xs mb-3">
+									<p className="text-slate-gray text-xs mb-3 leading-relaxed">
 										Find us in Hillsboro, Oregon
 									</p>
 									<div className="flex items-center text-teal font-medium text-xs">
@@ -96,12 +100,12 @@ export default function Home() {
 							</Link>
 						</ScrollReveal>
 						<ScrollReveal direction="fade" delay={200} distance={40}>
-							<Link href="/contact">
-								<div className="bg-white rounded-card p-4 md:p-5 shadow-soft card-flow water-droplet">
-									<h3 className="font-heading font-semibold text-base text-charcoal mb-1.5">
+							<Link href="/">
+								<div className="bg-white rounded-2xl p-4 md:p-5 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out h-full">
+									<h3 className="font-heading font-semibold text-base text-[#050DD7] mb-1.5">
 										Contact Us
 									</h3>
-									<p className="text-slate-gray text-xs mb-3">
+									<p className="text-slate-gray text-xs mb-3 leading-relaxed">
 										Get in touch with any questions
 									</p>
 									<div className="flex items-center text-teal font-medium text-xs">

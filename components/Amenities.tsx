@@ -27,7 +27,7 @@ export function Amenities() {
           return (
             <div
               key={index}
-              className="bg-white rounded-card p-6 shadow-soft hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">

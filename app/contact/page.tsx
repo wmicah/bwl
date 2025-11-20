@@ -35,7 +35,7 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <SectionContainer className="bg-soft-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="h-12 w-12 rounded-xl bg-sky-tint flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="h-12 w-12 rounded-xl bg-sky-tint flex items-center justify-center">
@@ -84,7 +84,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="h-12 w-12 rounded-xl bg-sky-tint flex items-center justify-center">
@@ -122,7 +122,7 @@ export default function ContactPage() {
               possible. For immediate assistance, visit us during business hours.
             </p>
           </div>
-          <div className="bg-white rounded-card p-8 shadow-card">
+          <div className="bg-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <ContactForm />
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
           <h2 className="font-heading text-h2 text-royal-blue mb-6 text-center">
             Visit Us
           </h2>
-          <div className="bg-cloud-white rounded-card overflow-hidden shadow-card">
+          <div className="bg-white rounded-2xl overflow-hidden border border-[#E4ECF0] shadow-md">
             <div className="aspect-video bg-gradient-to-br from-sky-tint to-mint-glow flex items-center justify-center">
               <div className="text-center p-8">
                 <MapPin className="h-16 w-16 text-teal mx-auto mb-4 opacity-50" />

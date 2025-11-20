@@ -20,11 +20,11 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-teal text-white hover:scale-105 hover:shadow-xl focus:ring-teal button-primary font-bold",
+      "bg-teal text-white hover:scale-[1.01] hover:shadow-lg focus:ring-teal button-primary font-bold transition-all duration-500 ease-out",
     secondary:
-      "bg-royal-blue text-white hover:scale-105 hover:shadow-xl focus:ring-royal-blue shadow-lg border-2 border-royal-blue/20 backdrop-blur-sm font-bold",
+      "bg-royal-blue text-white hover:scale-[1.01] hover:shadow-lg focus:ring-royal-blue shadow-lg border-2 border-royal-blue/20 backdrop-blur-sm font-bold transition-all duration-500 ease-out",
     outline:
-      "bg-white/95 backdrop-blur-sm border-2 border-teal text-charcoal hover:bg-teal hover:text-white hover:scale-105 focus:ring-teal hover:border-teal button-outline font-bold",
+      "bg-white/95 backdrop-blur-sm border-2 border-teal text-charcoal hover:bg-teal hover:text-white hover:scale-[1.01] focus:ring-teal hover:border-teal button-outline font-bold transition-all duration-500 ease-out",
   };
 
   const classes = cn(baseStyles, variants[variant], className);

@@ -24,7 +24,7 @@ export default function PhotosPage() {
               laundry needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/location">
+              <Link href="/">
                 <Button variant="primary">Visit Us</Button>
               </Link>
               <Link href="/services">
@@ -115,7 +115,7 @@ export default function PhotosPage() {
             experience the difference firsthand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/location">
+            <Link href="/">
               <Button variant="primary">Get Directions</Button>
             </Link>
             <Link href="/contact">

@@ -85,25 +85,15 @@ export function Hours() {
 	const [hoursCardStarted, setHoursCardStarted] = useState(false)
 
 	return (
-		<section
-			className="relative bg-gradient-to-b from-white via-[#F5F8FA] to-white overflow-hidden"
-			id="hours"
-		>
+		<section className="relative bg-[#F5F8FA] overflow-hidden" id="hours">
 			<WaveDivider variant="top" fillColor="#F5F8FA" />
-			<SectionContainer className="bg-transparent py-12 md:py-16">
+			<SectionContainer className="bg-transparent py-16 md:py-24">
 				<div className="max-w-7xl mx-auto relative">
 					{/* Layout: Large card on left, 2x2 grid on right (desktop) | Stacked (mobile) */}
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 relative">
 						{/* Hours Card - Large square/vertical card on left, starts centered then flows left */}
 						<HoursCardFlow onAnimationStart={() => setHoursCardStarted(true)}>
-							<div
-								className="bg-white rounded-card p-5 md:p-6 text-center water-droplet card-flow flex flex-col justify-center min-h-[300px] md:min-h-[400px] relative z-20"
-								style={{
-									boxShadow:
-										"0 10px 20px -5px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.03)",
-									border: "1px solid rgba(228, 236, 240, 0.5)",
-								}}
-							>
+							<div className="bg-white rounded-2xl p-5 md:p-6 text-center card-flow flex flex-col justify-center min-h-[300px] md:min-h-[400px] relative z-20 border border-[#E4ECF0] shadow-md shadow-black/5 hover:shadow-lg hover:shadow-black/10 transition-all">
 								<div className="flex justify-center mb-5">
 									<div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-sky-tint flex items-center justify-center icon-pulse">
 										<Clock
@@ -114,13 +104,13 @@ export function Hours() {
 									</div>
 								</div>
 								<h2
-									className="font-heading text-xl md:text-2xl lg:text-3xl text-royal-blue mb-3"
-									style={{ color: "#1E3A5F" }}
+									className="font-heading text-xl md:text-2xl lg:text-3xl mb-3"
+									style={{ color: "#050DD7" }}
 								>
 									Open 365 Days a Year
 								</h2>
 								<p
-									className="text-lg md:text-xl lg:text-2xl font-semibold text-charcoal mb-2"
+									className="text-lg md:text-xl lg:text-2xl font-semibold mb-2"
 									style={{ color: "#2B2F33" }}
 								>
 									7 Days a Week
@@ -132,8 +122,8 @@ export function Hours() {
 									{HOURS.open} – {HOURS.close}
 								</p>
 								<p
-									className="text-slate-gray text-base md:text-lg"
-									style={{ color: "#4A5568" }}
+									className="text-base md:text-lg leading-relaxed"
+									style={{ color: "#6A7A89" }}
 								>
 									Always available when you need us
 								</p>
@@ -163,12 +153,8 @@ export function Hours() {
 										distance={60}
 									>
 										<div
-											className="bg-white rounded-card p-4 md:p-5 card-flow water-droplet h-full"
+											className="bg-white rounded-2xl p-4 md:p-5 card-flow h-full border border-[#E4ECF0] shadow-md shadow-black/5 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-0.5 transition-all duration-500 ease-out"
 											style={{
-												backgroundColor: "rgba(255, 255, 255, 0.98)",
-												boxShadow:
-													"0 4px 12px -2px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.02)",
-												border: "1px solid rgba(228, 236, 240, 0.4)",
 												gridRow: gridRow,
 												gridColumn: gridCol,
 											}}
@@ -186,13 +172,13 @@ export function Hours() {
 												<div className="flex-1">
 													<h3
 														className="font-heading font-semibold text-sm md:text-base mb-1"
-														style={{ color: "#1E3A5F" }}
+														style={{ color: "#050DD7" }}
 													>
 														{amenity.title}
 													</h3>
 													<p
 														className="text-xs leading-relaxed"
-														style={{ color: "#4A5568" }}
+														style={{ color: "#6A7A89" }}
 													>
 														{amenity.description}
 													</p>

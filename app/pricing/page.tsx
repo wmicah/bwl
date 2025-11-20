@@ -132,25 +132,31 @@ export default function PricingPage() {
           {washPricing.map((tier, index) => (
             <div
               key={index}
-              className={`bg-cloud-white rounded-card p-6 shadow-soft hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300 ${
-                tier.highlight ? "ring-2 ring-teal ring-offset-4" : ""
+              className={`rounded-2xl p-6 border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out ${
+                tier.highlight
+                  ? "bg-gradient-to-br from-teal/10 to-royal-blue/10 border-2 border-teal/40 shadow-md"
+                  : "bg-white border-[#E4ECF0]"
               }`}
             >
               {tier.highlight && (
                 <div className="mb-4">
-                  <span className="inline-block bg-gold-accent text-charcoal text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
                     Largest Capacity
                   </span>
                 </div>
               )}
-              <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+              <h3 className={`font-heading font-semibold text-lg mb-2 ${
+                tier.highlight ? "text-[#050DD7]" : "text-charcoal"
+              }`}>
                 {tier.name}
               </h3>
               <p className="text-slate-gray text-sm mb-2">{tier.capacity}</p>
-              <p className="text-2xl font-bold text-royal-blue mb-3">
+              <p className={`text-2xl font-bold mb-3 ${
+                tier.highlight ? "text-[#050DD7]" : "text-royal-blue"
+              }`}>
                 {tier.price}
               </p>
-              <p className="text-slate-gray text-xs">{tier.description}</p>
+              <p className="text-slate-gray text-xs leading-relaxed">{tier.description}</p>
             </div>
           ))}
         </div>
@@ -170,7 +176,7 @@ export default function PricingPage() {
           {dryPricing.map((tier, index) => (
             <div
               key={index}
-              className="bg-white rounded-card p-6 shadow-soft hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 {tier.name}
@@ -197,23 +203,23 @@ export default function PricingPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
+            <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-2">
               Ozone Sanitizing
             </h3>
-            <p className="text-slate-gray text-sm mb-3">
+            <p className="text-slate-gray text-sm mb-3 leading-relaxed">
               Included with every wash cycle
             </p>
-            <p className="text-royal-blue font-semibold">No Extra Charge</p>
+            <p className="text-teal font-semibold">No Extra Charge</p>
           </div>
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
+            <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-2">
               Sanitizing Cycles
             </h3>
-            <p className="text-slate-gray text-sm mb-3">
+            <p className="text-slate-gray text-sm mb-3 leading-relaxed">
               Self-cleaning detergent dispensers
             </p>
-            <p className="text-royal-blue font-semibold">Included</p>
+            <p className="text-teal font-semibold">Included</p>
           </div>
         </div>
       </SectionContainer>
@@ -224,7 +230,7 @@ export default function PricingPage() {
           <h2 className="font-heading text-h2 text-royal-blue mb-6 text-center">
             Payment Options
           </h2>
-          <div className="bg-white rounded-card p-8 shadow-card">
+          <div className="bg-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="space-y-4">
               <div>
                 <h3 className="font-heading font-semibold text-charcoal mb-2">
@@ -270,7 +276,7 @@ export default function PricingPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-cloud-white rounded-card p-6 shadow-soft"
+                className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out"
               >
                 <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
                   {faq.question}

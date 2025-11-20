@@ -61,11 +61,11 @@ export default function OzonePage() {
               sanitation—included at no extra cost.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services">
-                <Button variant="primary">View All Services</Button>
+              <Link href="/">
+                <Button variant="primary">Get Directions</Button>
               </Link>
-              <Link href="/pricing">
-                <Button variant="outline">See Pricing</Button>
+              <Link href="/services">
+                <Button variant="outline">View All Services</Button>
               </Link>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function OzonePage() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-cloud-white rounded-card p-6 shadow-soft hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
               <div className="flex items-start space-x-3">
                 <CheckCircle2
@@ -368,7 +368,7 @@ export default function OzonePage() {
           {whoBenefits.map((item, index) => (
             <div
               key={index}
-              className="bg-cloud-white rounded-card p-6 shadow-soft hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out"
             >
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
                 {item.group}
@@ -392,7 +392,7 @@ export default function OzonePage() {
             technology—at no extra cost. Visit us today and feel the difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/location">
+            <Link href="/">
               <Button variant="primary">Get Directions</Button>
             </Link>
             <Link href="/services">

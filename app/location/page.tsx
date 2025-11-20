@@ -71,7 +71,7 @@ export default function LocationPage() {
       {/* Address & Hours */}
       <SectionContainer className="bg-soft-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="h-12 w-12 rounded-xl bg-sky-tint flex items-center justify-center">
@@ -98,7 +98,7 @@ export default function LocationPage() {
               </div>
             </div>
           </div>
-          <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="h-12 w-12 rounded-xl bg-sky-tint flex items-center justify-center">
@@ -131,7 +131,7 @@ export default function LocationPage() {
             Use the map below to get turn-by-turn directions to our location.
           </p>
         </div>
-        <div className="bg-white rounded-card overflow-hidden shadow-card">
+        <div className="bg-white rounded-2xl overflow-hidden border border-[#E4ECF0] shadow-md">
           {/* TODO: Replace with actual Google Maps embed */}
           <div className="aspect-video bg-gradient-to-br from-sky-tint to-mint-glow flex items-center justify-center">
             <div className="text-center p-8">

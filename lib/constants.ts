@@ -20,10 +20,10 @@ export const HOURS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Location", href: "/location" },
-  { label: "Contact", href: "/contact" },
+  { label: "Services", href: "/" },
+  { label: "Pricing", href: "/" },
+  { label: "Location", href: "/" },
+  { label: "Contact", href: "/" },
 ] as const;
 
 export const AMENITIES = [

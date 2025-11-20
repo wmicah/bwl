@@ -88,7 +88,7 @@ export function Footer() {
 						</h3>
 						<ul className="space-y-2">
 							{NAV_LINKS.map((link) => (
-								<li key={link.href}>
+								<li key={link.label}>
 									<Link
 										href={link.href}
 										className="text-white hover:text-teal transition-colors text-sm"

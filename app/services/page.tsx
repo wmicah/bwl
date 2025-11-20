@@ -33,10 +33,10 @@ export default function ServicesPage() {
               built Blue Wave Laundry to be the best laundromat in Oregon.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/pricing">
+              <Link href="/">
                 <Button variant="primary">View Pricing</Button>
               </Link>
-              <Link href="/location">
+              <Link href="/">
                 <Button variant="outline">Get Directions</Button>
               </Link>
             </div>
@@ -78,10 +78,10 @@ export default function ServicesPage() {
               </li>
             </ul>
           </div>
-          <div className="bg-cloud-white rounded-card p-8 shadow-card">
+          <div className="bg-cloud-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="text-center">
               <Clock className="h-16 w-16 text-teal mx-auto mb-4" />
-              <p className="font-heading font-semibold text-charcoal text-lg mb-2">
+              <p className="font-heading font-semibold text-[#050DD7] text-lg mb-2">
                 Quick & Efficient
               </p>
               <p className="text-slate-gray">
@@ -103,16 +103,35 @@ export default function ServicesPage() {
               Speed Queen Quantum Touch System
             </h2>
           </div>
-          <p className="text-lg text-slate-gray leading-relaxed max-w-3xl">
-            Every machine in our facility is brand new Speed Queen Quantum Touch
-            equipment. This state-of-the-art system delivers superior cleaning
-            power, energy efficiency, and reliability you can count on.
-          </p>
+          <div className="space-y-4 max-w-3xl">
+            <p className="text-lg text-slate-gray leading-relaxed">
+              Every machine in our facility is brand new Speed Queen Quantum Touch
+              equipment.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/50 rounded-xl p-4 border border-[#E4ECF0]">
+                <h3 className="font-heading font-semibold text-charcoal mb-2 text-sm">
+                  Superior Cleaning Power
+                </h3>
+                <p className="text-slate-gray text-sm">
+                  Advanced technology delivers exceptional results
+                </p>
+              </div>
+              <div className="bg-white/50 rounded-xl p-4 border border-[#E4ECF0]">
+                <h3 className="font-heading font-semibold text-charcoal mb-2 text-sm">
+                  Energy Efficient
+                </h3>
+                <p className="text-slate-gray text-sm">
+                  Uses less water and energy while maintaining performance
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-card p-6 shadow-soft">
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
+              <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-3">
               Advanced Cleaning Technology
             </h3>
             <p className="text-slate-gray text-sm leading-relaxed">
@@ -121,8 +140,8 @@ export default function ServicesPage() {
               energy.
             </p>
           </div>
-          <div className="bg-white rounded-card p-6 shadow-soft">
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
+          <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
+              <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-3">
               Professional-Grade Performance
             </h3>
             <p className="text-slate-gray text-sm leading-relaxed">
@@ -137,14 +156,17 @@ export default function ServicesPage() {
       <SectionContainer className="bg-soft-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-cloud-white rounded-card p-8 shadow-card">
+            <div className="bg-gradient-to-br from-teal/10 to-royal-blue/10 rounded-2xl p-8 border-2 border-teal/30 shadow-lg hover:shadow-xl transition-all">
               <div className="text-center">
-                <div className="h-20 w-20 bg-sky-tint rounded-full flex items-center justify-center mx-auto mb-4">
-                  <WashingMachine className="h-10 w-10 text-teal" />
+                <div className="h-20 w-20 bg-teal rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <WashingMachine className="h-10 w-10 text-white" />
                 </div>
-                <p className="text-4xl font-bold text-royal-blue mb-2">100 lb</p>
-                <p className="text-slate-gray font-semibold">
-                  Largest capacity in the state
+                <p className="text-5xl font-bold text-[#050DD7] mb-2">100 lb</p>
+                <p className="text-lg font-semibold text-charcoal mb-2">
+                  Largest Capacity in the State
+                </p>
+                <p className="text-sm text-slate-gray">
+                  No other laundromat in Oregon offers this capacity
                 </p>
               </div>
             </div>
@@ -175,14 +197,6 @@ export default function ServicesPage() {
                 <span>Bulk laundry for businesses</span>
               </li>
             </ul>
-            <div className="bg-gold-accent/20 rounded-lg p-4 border border-gold-accent/30">
-              <p className="text-sm text-charcoal font-semibold">
-                Largest in the State
-              </p>
-              <p className="text-sm text-slate-gray mt-1">
-                No other laundromat in Oregon offers 100 lb capacity washers
-              </p>
-            </div>
           </div>
         </div>
       </SectionContainer>
@@ -205,7 +219,7 @@ export default function ServicesPage() {
               Combined with 200 Gs of spin from our washers, your clothes dry
               faster and more efficiently.
             </p>
-            <div className="bg-white rounded-card p-6 shadow-soft">
+            <div className="bg-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
               <h3 className="font-heading font-semibold text-charcoal mb-2">
                 Faster Dry Times
               </h3>
@@ -215,10 +229,10 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
-          <div className="bg-soft-white rounded-card p-8 shadow-card">
+          <div className="bg-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="text-center">
               <RefreshCw className="h-16 w-16 text-teal mx-auto mb-4" />
-              <p className="font-heading font-semibold text-charcoal text-lg mb-2">
+              <p className="font-heading font-semibold text-[#050DD7] text-lg mb-2">
                 Even Drying
               </p>
               <p className="text-slate-gray text-sm">
@@ -247,7 +261,7 @@ export default function ServicesPage() {
             consistently clean environment for every customer.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+            <div className="bg-cloud-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
               <h3 className="font-heading font-semibold text-charcoal mb-2">
                 Ozone Sanitation
               </h3>
@@ -255,7 +269,7 @@ export default function ServicesPage() {
                 Advanced ozone technology kills mold, mildew, and bacteria
               </p>
             </div>
-            <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+            <div className="bg-cloud-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
               <h3 className="font-heading font-semibold text-charcoal mb-2">
                 Self-Cleaning Dispensers
               </h3>
@@ -263,7 +277,7 @@ export default function ServicesPage() {
                 Detergent dispensers are automatically cleaned with each cycle
               </p>
             </div>
-            <div className="bg-cloud-white rounded-card p-6 shadow-soft">
+            <div className="bg-cloud-white rounded-2xl p-6 border border-[#E4ECF0] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-500 ease-out">
               <h3 className="font-heading font-semibold text-charcoal mb-2">
                 Consistent Quality
               </h3>
@@ -315,10 +329,10 @@ export default function ServicesPage() {
               </li>
             </ul>
           </div>
-          <div className="bg-white rounded-card p-8 shadow-card">
+          <div className="bg-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="text-center">
               <CreditCard className="h-16 w-16 text-teal mx-auto mb-4" />
-              <p className="font-heading font-semibold text-charcoal text-lg mb-2">
+              <p className="font-heading font-semibold text-[#050DD7] text-lg mb-2">
                 No Quarters Needed
               </p>
               <p className="text-slate-gray text-sm">
@@ -332,10 +346,10 @@ export default function ServicesPage() {
       {/* Free WiFi */}
       <SectionContainer className="bg-soft-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-cloud-white rounded-card p-8 shadow-card">
+          <div className="bg-cloud-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="text-center">
               <Wifi className="h-16 w-16 text-teal mx-auto mb-4" />
-              <p className="font-heading font-semibold text-charcoal text-lg mb-2">
+              <p className="font-heading font-semibold text-[#050DD7] text-lg mb-2">
                 Free WiFi
               </p>
               <p className="text-slate-gray">
@@ -406,10 +420,10 @@ export default function ServicesPage() {
               </li>
             </ul>
           </div>
-          <div className="bg-white rounded-card p-8 shadow-card">
+          <div className="bg-white rounded-2xl p-8 border border-[#E4ECF0] shadow-md">
             <div className="text-center">
               <Car className="h-16 w-16 text-teal mx-auto mb-4" />
-              <p className="font-heading font-semibold text-charcoal text-lg mb-2">
+              <p className="font-heading font-semibold text-[#050DD7] text-lg mb-2">
                 Easy Access
               </p>
               <p className="text-slate-gray text-sm">
@@ -435,7 +449,7 @@ export default function ServicesPage() {
             <div className="h-16 w-16 rounded-full bg-sky-tint flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-teal">1</span>
             </div>
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-2">
               Load Your Clothes
             </h3>
             <p className="text-slate-gray text-sm">
@@ -446,7 +460,7 @@ export default function ServicesPage() {
             <div className="h-16 w-16 rounded-full bg-sky-tint flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-teal">2</span>
             </div>
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-2">
               Pay & Start
             </h3>
             <p className="text-slate-gray text-sm">
@@ -457,7 +471,7 @@ export default function ServicesPage() {
             <div className="h-16 w-16 rounded-full bg-sky-tint flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-teal">3</span>
             </div>
-            <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-heading font-semibold text-lg text-[#050DD7] mb-2">
               Dry & Go
             </h3>
             <p className="text-slate-gray text-sm">

@@ -39,6 +39,34 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Custom Scrollbar Styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(46, 74, 158, 0.3) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(46, 74, 158, 0.25);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(46, 74, 158, 0.4);
+    background-clip: padding-box;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-charcoal);
     font-family: var(--font-heading), Poppins, sans-serif;
@@ -308,7 +336,7 @@
 
   /* Smooth card hover with water-like flow */
   .card-flow {
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -316,8 +344,8 @@
   }
 
   .card-flow:hover {
-    transform: translateY(-8px) translateZ(0);
-    box-shadow: 0 12px 32px rgba(9, 196, 242, 0.15);
+    transform: translateY(-4px) translateZ(0);
+    box-shadow: 0 8px 24px rgba(9, 196, 242, 0.12);
   }
 
   /* Preserve image quality - no scaling on image itself */
