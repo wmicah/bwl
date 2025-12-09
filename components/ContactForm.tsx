@@ -119,8 +119,8 @@ export function ContactForm() {
           >
             <option value="">Select a subject</option>
             <option value="general">General Inquiry</option>
-            <option value="pricing">Pricing Question</option>
             <option value="services">Services Information</option>
+            <option value="lost-found">Lost & Found</option>
             <option value="feedback">Feedback</option>
             <option value="other">Other</option>
           </select>

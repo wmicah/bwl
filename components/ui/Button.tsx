@@ -1,3 +1,5 @@
+"use client"
+
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -20,11 +22,11 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-teal text-white hover:scale-[1.01] hover:shadow-lg focus:ring-teal button-primary font-bold transition-all duration-500 ease-out",
+      "bg-gradient-to-r from-teal to-[#06AED9] text-white hover:scale-[1.03] hover:shadow-2xl hover:shadow-teal/40 focus:ring-teal button-primary font-bold transition-all duration-300 ease-out relative overflow-hidden group",
     secondary:
-      "bg-royal-blue text-white hover:scale-[1.01] hover:shadow-lg focus:ring-royal-blue shadow-lg border-2 border-royal-blue/20 backdrop-blur-sm font-bold transition-all duration-500 ease-out",
+      "bg-gradient-to-r from-royal-blue to-[#1E3A6F] text-white hover:scale-[1.03] hover:shadow-2xl hover:shadow-royal-blue/40 focus:ring-royal-blue shadow-lg border-2 border-royal-blue/20 backdrop-blur-sm font-bold transition-all duration-300 ease-out relative overflow-hidden group",
     outline:
-      "bg-white/95 backdrop-blur-sm border-2 border-teal text-charcoal hover:bg-teal hover:text-white hover:scale-[1.01] focus:ring-teal hover:border-teal button-outline font-bold transition-all duration-500 ease-out",
+      "bg-white/98 backdrop-blur-sm border-2 border-teal/60 text-charcoal hover:bg-gradient-to-r hover:from-teal hover:to-[#06AED9] hover:text-white hover:scale-[1.03] hover:shadow-2xl hover:shadow-teal/30 hover:border-teal focus:ring-teal button-outline font-bold transition-all duration-300 ease-out relative overflow-hidden group",
   };
 
   const classes = cn(baseStyles, variants[variant], className);
@@ -35,7 +37,9 @@ export function Button({
 
   return (
     <button className={classes} {...props}>
-      {children}
+      {/* Premium shimmer effect */}
+      <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      <span className="relative z-10 inline-flex items-center justify-center">{children}</span>
     </button>
   );
 }

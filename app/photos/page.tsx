@@ -12,13 +12,13 @@ export default function PhotosPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-sky-tint to-soft-white">
+      <section className="pt-16 md:pt-20 pb-10 md:pb-12 bg-gradient-to-br from-sky-tint to-soft-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-h1 text-royal-blue mb-6">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-h1 text-royal-blue mb-4 md:mb-6">
               Photo Gallery
             </h1>
-            <p className="text-lg md:text-xl text-slate-gray leading-relaxed mb-8">
+            <p className="text-base md:text-lg lg:text-xl text-slate-gray leading-relaxed mb-6 md:mb-8">
               Take a look at our modern, clean, and well-maintained laundromat
               facility. See why Blue Wave Laundry is the best choice for your
               laundry needs.
@@ -118,8 +118,8 @@ export default function PhotosPage() {
             <Link href="/">
               <Button variant="primary">Get Directions</Button>
             </Link>
-            <Link href="/contact">
-              <Button variant="outline">Contact Us</Button>
+            <Link href="/faq">
+              <Button variant="outline">View FAQ</Button>
             </Link>
           </div>
         </div>

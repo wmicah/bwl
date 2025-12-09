@@ -1,6 +1,8 @@
+"use client"
+
 import { BRAND, HOURS, NAV_LINKS } from "@/lib/constants"
 import { Logo } from "@/components/Logo"
-import { Mail, MapPin, Clock } from "lucide-react"
+import { Mail, MapPin, Clock, Phone, Facebook, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -67,6 +69,18 @@ export function Footer() {
 								</address>
 							</div>
 							<div className="flex items-center space-x-2">
+								<Phone
+									className="h-5 w-5 text-teal flex-shrink-0"
+									aria-hidden="true"
+								/>
+								<a
+									href={`tel:${BRAND.phone.replace(/\D/g, '')}`}
+									className="text-white hover:text-teal transition-colors"
+								>
+									{BRAND.phone}
+								</a>
+							</div>
+							<div className="flex items-center space-x-2">
 								<Mail
 									className="h-5 w-5 text-teal flex-shrink-0"
 									aria-hidden="true"
@@ -78,6 +92,17 @@ export function Footer() {
 									{BRAND.email}
 								</a>
 							</div>
+							<div className="pt-2">
+								<a
+									href={BRAND.googleMapsUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-teal hover:text-white transition-colors text-sm inline-flex items-center"
+								>
+									<MapPin className="h-4 w-4 mr-1" />
+									View on Google Maps
+								</a>
+							</div>
 						</div>
 					</div>
 
@@ -86,7 +111,7 @@ export function Footer() {
 						<h3 className="font-heading font-semibold text-base mb-4 text-white/70">
 							Quick Links
 						</h3>
-						<ul className="space-y-2">
+						<ul className="space-y-2 mb-6">
 							{NAV_LINKS.map((link) => (
 								<li key={link.label}>
 									<Link
@@ -98,6 +123,27 @@ export function Footer() {
 								</li>
 							))}
 						</ul>
+						{/* Social Media */}
+						<div className="flex items-center space-x-3">
+							<a
+								href="#"
+								onClick={(e) => e.preventDefault()}
+								className="text-white/40 hover:text-white/60 transition-colors"
+								aria-label="Facebook (coming soon)"
+								title="Facebook (coming soon)"
+							>
+								<Facebook className="h-5 w-5" />
+							</a>
+							<a
+								href="#"
+								onClick={(e) => e.preventDefault()}
+								className="text-white/40 hover:text-white/60 transition-colors"
+								aria-label="Instagram (coming soon)"
+								title="Instagram (coming soon)"
+							>
+								<Instagram className="h-5 w-5" />
+							</a>
+						</div>
 					</div>
 				</div>
 
