@@ -5,11 +5,7 @@ import { WaveDivider } from "@/components/ui/WaveDivider";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { BRAND, HOURS } from "@/lib/constants";
 import { MapPin, Clock } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
-
 export default function LocationPage() {
-  const fullAddress = `${BRAND.address.street}, ${BRAND.address.city}, ${BRAND.address.state} ${BRAND.address.zip}`;
 
 
   return (
@@ -125,7 +121,7 @@ export default function LocationPage() {
               Use the map below to get turn-by-turn directions.
             </p>
             <p className="text-base text-slate-gray">
-              You can also find us by searching <strong className="text-royal-blue">"Blue Wave Laundry"</strong> on Google Maps or Google Search—we&apos;re <strong className="text-teal">listed on Google Business</strong> and easy to locate.
+              You can also find us by searching <strong className="text-royal-blue">&quot;Blue Wave Laundry&quot;</strong> on Google Maps or Google Search—we&apos;re <strong className="text-teal">listed on Google Business</strong> and easy to locate.
             </p>
           </ScrollReveal>
         </div>

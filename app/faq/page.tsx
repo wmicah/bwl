@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { WaveDivider } from "@/components/ui/WaveDivider";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { HelpCircle, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 

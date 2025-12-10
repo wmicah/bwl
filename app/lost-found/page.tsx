@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { WaveDivider } from "@/components/ui/WaveDivider";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Search, Mail, Clock, CheckCircle2, Heart } from "lucide-react";
+import { Search, Mail, Clock, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BRAND } from "@/lib/constants";
 import Link from "next/link";

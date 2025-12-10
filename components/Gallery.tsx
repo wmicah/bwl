@@ -14,27 +14,10 @@ export function Gallery() {
     setActiveCard(activeCard === imageId ? null : imageId);
   };
 
-  const handleTouchStart = (e: React.TouchEvent, imageId: number) => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     touchStartTime.current = Date.now();
     const touch = e.touches[0];
     touchStartPos.current = { x: touch.clientX, y: touch.clientY };
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent, imageId: number) => {
-    if (!touchStartPos.current) return;
-    
-    const touch = e.changedTouches[0];
-    const deltaX = Math.abs(touch.clientX - touchStartPos.current.x);
-    const deltaY = Math.abs(touch.clientY - touchStartPos.current.y);
-    const deltaTime = Date.now() - touchStartTime.current;
-    
-    // Only trigger if it's a tap (not a swipe) and quick enough
-    if (deltaX < 10 && deltaY < 10 && deltaTime < 300) {
-      e.preventDefault();
-      handleCardClick(imageId);
-    }
-    
-    touchStartPos.current = null;
   };
 
   return (
@@ -64,8 +47,23 @@ export function Gallery() {
               key={image.id}
               className="relative aspect-[4/3] rounded-lg md:rounded-card overflow-hidden shadow-sm md:shadow-soft card-flip-container group cursor-pointer touch-manipulation select-none"
               onClick={() => handleCardClick(image.id)}
-              onTouchStart={(e) => handleTouchStart(e, image.id)}
-              onTouchEnd={(e) => handleTouchEnd(e, image.id)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={(e) => {
+                if (!touchStartPos.current) return;
+                
+                const touch = e.changedTouches[0];
+                const deltaX = Math.abs(touch.clientX - touchStartPos.current.x);
+                const deltaY = Math.abs(touch.clientY - touchStartPos.current.y);
+                const deltaTime = Date.now() - touchStartTime.current;
+                
+                // Only trigger if it's a tap (not a swipe) and quick enough
+                if (deltaX < 10 && deltaY < 10 && deltaTime < 300) {
+                  e.preventDefault();
+                  handleCardClick(image.id);
+                }
+                
+                touchStartPos.current = null;
+              }}
             >
               {/* Front slide - Image */}
               <div className={`absolute inset-0 card-flip-front transition-transform duration-700 ease-in-out ${isActive ? '-translate-y-full' : 'md:group-hover:-translate-y-full'}`}>
