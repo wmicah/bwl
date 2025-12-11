@@ -55,6 +55,14 @@ export function SpecialsPanel({ isOpen, onClose }: SpecialsPanelProps) {
 	async function fetchSpecials() {
 		setLoading(true);
 		try {
+			// Check if Sanity is properly configured
+			const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+			if (!projectId || projectId === "placeholder") {
+				setSpecials([]);
+				setLoading(false);
+				return;
+			}
+
 			const query = `*[_type == "special" && isActive == true] | order(priority desc, startDate desc) {
 				_id,
 				title,

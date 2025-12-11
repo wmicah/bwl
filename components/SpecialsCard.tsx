@@ -5,7 +5,29 @@ import { Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SpecialsPanel } from "./SpecialsPanel";
 
+// Check if Sanity is configured
+function isSanityConfigured(): boolean {
+	if (typeof window === "undefined") {
+		// Server-side: check process.env
+		return !!(
+			process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
+			process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== "placeholder" &&
+			process.env.NEXT_PUBLIC_SANITY_DATASET &&
+			process.env.NEXT_PUBLIC_SANITY_DATASET !== "production"
+		);
+	}
+	// Client-side: check if env vars are available (they're embedded at build time)
+	return !!(
+		process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
+		process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== "placeholder"
+	);
+}
+
 export function SpecialsCard() {
+	// Don't render if Sanity isn't configured
+	if (!isSanityConfigured()) {
+		return null;
+	}
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Close on escape key
