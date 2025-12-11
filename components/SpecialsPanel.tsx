@@ -7,6 +7,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 interface Special {
 	_id: string;
@@ -16,7 +17,7 @@ interface Special {
 	startDate: string;
 	endDate: string;
 	isActive: boolean;
-	image?: any;
+	image?: SanityImageSource;
 	priority?: number;
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Tag, X } from "lucide-react";
+import { Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SpecialsPanel } from "./SpecialsPanel";
 
