@@ -24,10 +24,6 @@ function isSanityConfigured(): boolean {
 }
 
 export function SpecialsCard() {
-	// Don't render if Sanity isn't configured
-	if (!isSanityConfigured()) {
-		return null;
-	}
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Close on escape key
@@ -53,6 +49,11 @@ export function SpecialsCard() {
 			document.body.style.overflow = "";
 		};
 	}, [isOpen]);
+
+	// Don't render if Sanity isn't configured (check after hooks)
+	if (!isSanityConfigured()) {
+		return null;
+	}
 
 	return (
 		<>
