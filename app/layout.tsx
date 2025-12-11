@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${urbanist.variable} ${inter.variable}`}>
-      <body className="font-body">{children}</body>
+      <body className="font-body overflow-x-hidden">{children}</body>
     </html>
   );
 }

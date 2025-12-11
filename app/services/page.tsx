@@ -444,14 +444,14 @@ export default function ServicesPage() {
           >
             <div className='bg-white rounded-lg p-8 border-l-4 border-teal shadow-sm'>
               <p className='text-lg text-slate-gray leading-relaxed mb-4'>
-                All payments are processed through our convenient kiosk system.
+                All payments are processed through our convenient KIOSOFT kiosk system. Simply use your credit or debit card, cash, Apple Pay, or Android Pay at the kiosk to pay for your wash and dry cycles. Loyalty cards are also available.
               </p>
-              <p className='text-base text-slate-gray font-medium'>
-                Simply use your{" "}
+              <p className='text-base text-slate-gray font-medium mb-3'>
+                Pay with{" "}
                 <strong className='text-royal-blue'>
-                  credit or debit card
-                </strong>{" "}
-                at the kiosk to pay for your wash and dry cycles.
+                  cash, credit, debit, Apple Pay, Android Pay, or reloadable loyalty cards
+                </strong>
+                . No quarters needed!
               </p>
             </div>
           </ScrollReveal>

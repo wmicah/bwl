@@ -41,7 +41,7 @@ export const AMENITIES = [
   },
   {
     title: "Contactless Payment & Loyalty Cards",
-    description: "No quarters needed, reloadable cards",
+    description: "Pay with cash, credit/debit, Apple Pay, Android Pay, or reloadable cards. No quarters needed.",
     icon: "credit-card",
   },
   {
@@ -55,8 +55,8 @@ export const AMENITIES = [
     icon: "clock",
   },
   {
-    title: "30+ Languages, No Quarters Needed",
-    description: "Accessible and convenient for everyone",
+    title: "30+ Languages on Speed Queen Screens",
+    description: "Speed Queen Quantum Touch screens support 30+ languages for accessibility",
     icon: "globe",
   },
 ] as const
@@ -103,9 +103,9 @@ export const GALLERY_IMAGES = [
     id: 1,
     alt: "Laundromat interior",
     src: "/images/interior.JPG",
-    title: "Laundromat Interior",
+    title: "Customer Waiting Area",
     description:
-      "Our spacious, modern facility with rows of high-capacity Speed Queen machines in a clean, well-lit environment.",
+      "Comfortable seating area with free WiFi, perfect for relaxing while your laundry is being done.",
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ export const GALLERY_IMAGES = [
     src: "/images/speedqueenarea.JPG",
     title: "Speed Queen Machines",
     description:
-      "Brand new Speed Queen Quantum Touch washers with up to 100 lb capacity—the largest in the state.",
+      "Brand new Speed Queen Quantum Touch washers with up to 100 lb capacity—the largest in the state. Touch screens support 30+ languages.",
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ export const GALLERY_IMAGES = [
     src: "/images/kiosoft.JPG",
     title: "Payment Kiosks",
     description:
-      "Modern KIOSOFT payment kiosks supporting contactless payment, loyalty cards, and 30+ languages.",
+      "Modern KIOSOFT payment kiosks supporting contactless payment, cash, credit, debit, and loyalty cards.",
   },
   {
     id: 4,
@@ -135,9 +135,9 @@ export const GALLERY_IMAGES = [
     id: 5,
     alt: "Customer area",
     src: "/images/customerarea.JPG",
-    title: "Customer Waiting Area",
+    title: "Laundromat Interior",
     description:
-      "Comfortable seating area with free WiFi, perfect for relaxing while your laundry is being done.",
+      "Hygienic stainless steel folding tables for cleanliness.",
   },
   {
     id: 6,

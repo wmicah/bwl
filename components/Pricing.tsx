@@ -51,7 +51,7 @@ export function Pricing() {
               Contactless Payment & Loyalty Cards
             </p>
             <p className="text-sm text-slate-gray mt-2">
-              No quarters needed. Reloadable cards available.
+              Pay with cash, credit/debit, Apple Pay, Android Pay, or reloadable cards. No quarters needed.
             </p>
           </div>
         </div>
@@ -86,8 +86,7 @@ export function Pricing() {
 
       <div className="text-center mt-8">
         <p className="text-slate-gray text-sm">
-          All machines accept contactless payment and loyalty cards. No quarters
-          needed.
+          All machines accept contactless payment and loyalty cards. Pay with cash, credit/debit, Apple Pay, Android Pay, or reloadable cards. No quarters needed.
         </p>
       </div>
     </SectionContainer>

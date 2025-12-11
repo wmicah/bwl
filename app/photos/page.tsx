@@ -70,7 +70,7 @@ export default function PhotosPage() {
                 Payment System
               </h3>
               <p className="text-slate-gray text-sm">
-                Easy-to-use contactless payment kiosks supporting 30+ languages.
+                Modern KIOSOFT payment kiosks supporting contactless payment, cash, credit, debit, and loyalty cards.
               </p>
             </div>
             <div className="bg-white rounded-card p-6 shadow-soft">
@@ -78,8 +78,7 @@ export default function PhotosPage() {
                 Waiting Area
               </h3>
               <p className="text-slate-gray text-sm">
-                Comfortable seating with free WiFi while you wait for your
-                laundry.
+                Comfortable seating with free WiFi, perfect for relaxing while your laundry is being done.
               </p>
             </div>
             <div className="bg-white rounded-card p-6 shadow-soft">

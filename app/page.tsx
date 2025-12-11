@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar"
 import { SpecialsBanner } from "@/components/SpecialsBanner"
+import { SpecialsCard } from "@/components/SpecialsCard"
 import { Hero } from "@/components/Hero"
 import { Hours } from "@/components/Hours"
 import { OzoneSection } from "@/components/OzoneSection"
@@ -11,9 +12,10 @@ import { ArrowRight } from "lucide-react"
 
 export default function Home() {
 	return (
-		<main className="min-h-screen bg-soft-white">
+		<main className="min-h-screen bg-soft-white overflow-x-hidden">
 			<Navbar />
 			<SpecialsBanner />
+			<SpecialsCard />
 			<Hero />
 
 			{/* Ozone Sanitation Section */}
