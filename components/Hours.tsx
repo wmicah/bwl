@@ -71,7 +71,7 @@ const amenities = [
 	},
 	{
 		title: "Contactless Payment & Loyalty Card",
-		description: "Pay with cash, credit/debit, Apple Pay, Android Pay, or reloadable cards. No quarters needed.",
+		description: "No quarters needed, reloadable cards. Pay with cash, credit/debit, Apple Pay, Android Pay.",
 		icon: CreditCard,
 	},
 	{

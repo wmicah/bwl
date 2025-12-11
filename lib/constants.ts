@@ -40,7 +40,7 @@ export const AMENITIES = [
     icon: "shield",
   },
   {
-    title: "Contactless Payment & Loyalty Cards",
+    title: "Contactless Payment & Loyalty Card",
     description: "Pay with cash, credit/debit, Apple Pay, Android Pay, or reloadable cards. No quarters needed.",
     icon: "credit-card",
   },
